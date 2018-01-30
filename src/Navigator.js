@@ -1332,10 +1332,10 @@ var Navigator = createReactClass({
   },
 
   _disableTVEventHandler: function() {
-    if (this._tvEventHandler) {
+    if (this._tvEventHandler && this._tvEventHandler.disable) {
       this._tvEventHandler.disable();
-      delete this._tvEventHandler;
     }
+    delete this._tvEventHandler;
   },
 
   render: function() {
